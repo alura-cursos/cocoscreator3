@@ -4,6 +4,7 @@ cc._RF.push(module, 'd3299InP/hAoKRk6tw0FpIQ', 'Jogador');
 
 "use strict";
 
+var Teclado = require("Teclado");
 cc.Class({
     extends: cc.Component,
 
@@ -16,14 +17,13 @@ cc.Class({
         _controleAnimacao: cc.Component,
         _canvas: cc.Canvas,
         _camera: cc.Node,
-        vivo: true,
+
         _audioTiro: cc.AudioSource
 
     },
 
     onLoad: function onLoad() {
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.teclaPressionada, this);
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.teclaSolta, this);
+
         this._movimentacao = this.getComponent("Movimentacao");
         this._controleAnimacao = this.getComponent("ControleDeAnimacao");
         this._audioTiro = this.getComponent(cc.AudioSource);
@@ -31,7 +31,6 @@ cc.Class({
         this._canvas.on("mousedown", this.atirar, this);
         this._canvas.on("mousemove", this.mudarDirecaoDaAnimcao, this);
         this._camera = cc.find("Camera");
-        this.vivo = true;
         this.node.on("SofreDano", this.sofrerDano, this);
         this._vidaAtual = this.vidaMaxima;
     },
@@ -39,15 +38,32 @@ cc.Class({
     update: function update(deltaTime) {
         this._movimentacao.setDirecao(this._direcao);
         this._movimentacao.andarPraFrente();
+
+        this._direcao = cc.Vec2.ZERO;
+
+        if (Teclado.estaPressionada(cc.KEY.a)) {
+            this._direcao.x -= 1;
+        }
+        if (Teclado.estaPressionada(cc.KEY.d)) {
+            this._direcao.x += 1;
+        }
+
+        if (Teclado.estaPressionada(cc.KEY.s)) {
+            this._direcao.y -= 1;
+        }
+        if (Teclado.estaPressionada(cc.KEY.w)) {
+            this._direcao.y += 1;
+        }
     },
 
-    sofrerDano: function sofrerDano() {
-        this._vidaAtual = 1;
+    sofrerDano: function sofrerDano(evento) {
+        this._vidaAtual -= evento.detail.dano;
         var eventoPerdeVida = new cc.Event.EventCustom("JogadoraPerdeuVida", true);
         eventoPerdeVida.setUserData({ vidaAtual: this._vidaAtual, vidaMaxima: this.vidaMaxima });
         this.node.dispatchEvent(eventoPerdeVida);
         if (this._vidaAtual < 0) {
-            this.vivo = false;
+            var jogoAcabou = new cc.Event.EventCustom("JogoAcabou", true);
+            this.node.dispatchEvent(jogoAcabou);
         }
     },
 
@@ -75,44 +91,9 @@ cc.Class({
     atirar: function atirar(event) {
         var direcao = this.calcularDirecaoMouse(event);
         var disparo = cc.instantiate(this.tiro);
-        disparo.parent = this.node.parent;
-        disparo.position = this.node.position;
-        disparo.getComponent("Movimentacao").setDirecao(direcao);
+        disparo.getComponent("Tiro").iniciliza(this.node.parent, this.node.position, direcao);
 
         this._audioTiro.play();
-    },
-
-    teclaPressionada: function teclaPressionada(event) {
-
-        if (event.keyCode == cc.KEY.a) {
-            this._direcao.x = -1;
-        }
-        if (event.keyCode == cc.KEY.d) {
-            this._direcao.x = 1;
-        }
-
-        if (event.keyCode == cc.KEY.w) {
-            this._direcao.y = 1;
-        }
-        if (event.keyCode == cc.KEY.s) {
-            this._direcao.y = -1;
-        }
-    },
-
-    teclaSolta: function teclaSolta(event) {
-        if (event.keyCode == cc.KEY.a) {
-            this._direcao.x = 0;
-        }
-        if (event.keyCode == cc.KEY.d) {
-            this._direcao.x = 0;
-        }
-
-        if (event.keyCode == cc.KEY.w) {
-            this._direcao.y = 0;
-        }
-        if (event.keyCode == cc.KEY.s) {
-            this._direcao.y = 0;
-        }
     }
 
 });

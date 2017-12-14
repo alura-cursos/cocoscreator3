@@ -4825,8 +4825,8 @@
     "relativePath": "Imagens\\Zumbi\\ParadoFrente\\idle_front00028.png"
   },
   "b1b819d6-754e-4a9b-a9d2-8a24bff4c720": {
-    "asset": 1513087648484,
-    "meta": 1513087648506,
+    "asset": 1513170913722,
+    "meta": 1513170913746,
     "relativePath": "Jogo.fire"
   },
   "11b87520-494e-4168-9ee4-2a3e9c756375": {
@@ -4845,13 +4845,13 @@
     "relativePath": "Prefabs\\Tiro.prefab"
   },
   "66dfbd53-7703-4d8d-995e-f4137a9a904e": {
-    "asset": 1513080132934,
+    "asset": 1513086987224,
     "meta": 1512991333695,
     "relativePath": "Scripts"
   },
   "65bf74ea-f0ad-46af-84a6-e29f55a14ec1": {
-    "asset": 1513085296761,
-    "meta": 1513085296772,
+    "asset": 1513170624247,
+    "meta": 1513170624264,
     "relativePath": "Prefabs\\Zumbi.prefab"
   },
   "7fefff2d-b400-4ab6-bced-09c9b8bd7d30": {
@@ -4894,16 +4894,6 @@
     "meta": 1513075769272,
     "relativePath": "Imagens\\Caveira.png"
   },
-  "1b807be7-a07f-4b75-a0b3-c41eca739dc2": {
-    "asset": 1513075963527,
-    "meta": 1513075964579,
-    "relativePath": "Scripts\\GameOver.js"
-  },
-  "c57668a5-77cf-46ff-a2cd-feb1b0b3ef86": {
-    "asset": 1513077962307,
-    "meta": 1513077967407,
-    "relativePath": "Scripts\\Tiro.js"
-  },
   "adcf8e1a-9a72-4112-99f0-119e8937a968": {
     "asset": 1513078312758,
     "meta": 1513078321553,
@@ -4920,7 +4910,7 @@
     "relativePath": "Audio\\SomTiro.ogg"
   },
   "124b8a91-2d1c-4788-b241-2929b170f2b2": {
-    "asset": 1513084730533,
+    "asset": 1513086936579,
     "meta": 1513084730537,
     "relativePath": "Audio"
   },
@@ -4928,11 +4918,6 @@
     "asset": 1513085271161,
     "meta": 1513085271170,
     "relativePath": "Audio\\MorteZumbi.ogg"
-  },
-  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
-    "asset": 1513085428544,
-    "meta": 1513085434706,
-    "relativePath": "Scripts\\Inimigo.js"
   },
   "5a5f114a-eddd-4fdf-9afb-48566e8c2825": {
     "asset": 1513085558142,
@@ -4944,14 +4929,34 @@
     "meta": 1513086936584,
     "relativePath": "Audio\\CoraçãoBatendo.wav"
   },
-  "d3299227-3ff8-40a0-a464-eadc34169210": {
-    "asset": 1513087281817,
-    "meta": 1513087289882,
-    "relativePath": "Scripts\\Jogador.js"
-  },
   "f2b06ea0-d4e0-45e7-861c-80d631bc9cb4": {
-    "asset": 1513087562389,
-    "meta": 1513087563390,
+    "asset": 1513249764436,
+    "meta": 1513249770102,
     "relativePath": "Scripts\\AudioCoracao.js"
+  },
+  "1b807be7-a07f-4b75-a0b3-c41eca739dc2": {
+    "asset": 1513165241493,
+    "meta": 1513165257410,
+    "relativePath": "Scripts\\GameOver.js"
+  },
+  "8e9a13d8-220a-42c6-8f19-9d4b3809206f": {
+    "asset": 1513169718199,
+    "meta": 1513169747837,
+    "relativePath": "Scripts\\Teclado.js"
+  },
+  "c57668a5-77cf-46ff-a2cd-feb1b0b3ef86": {
+    "asset": 1513170390585,
+    "meta": 1513170398504,
+    "relativePath": "Scripts\\Tiro.js"
+  },
+  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
+    "asset": 1513170554516,
+    "meta": 1513170576465,
+    "relativePath": "Scripts\\Inimigo.js"
+  },
+  "d3299227-3ff8-40a0-a464-eadc34169210": {
+    "asset": 1513170651705,
+    "meta": 1513170652900,
+    "relativePath": "Scripts\\Jogador.js"
   }
 }

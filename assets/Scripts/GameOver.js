@@ -3,30 +3,31 @@ cc.Class({
 
     properties: {
         _gameOver : cc.Node,
-        _jogador : cc.Componet,
+        _possoReiniciar : false,
     },
 
     onLoad: function () {
         cc.director.resume();
-        let jogadora = cc.find("Personagens/Personagem");
-        this._jogador = jogadora.getComponent("Jogador");
+
         this._gameOver = cc.find("Interface/GameOver");
-        
+        this._possoReiniciar = false;
         let canvas = cc.find("Canvas");
         canvas.on("mousedown", this.jogarNovamente, this);
-     
-    },
-    
-    jogarNovamente : function(){
-      if(!this._jogador.vivo){
-          cc.director.loadScene("Jogo");
-      }  
+        cc.director.getScene().on("JogoAcabou", this.jogoAcabou, this);
+
     },
 
-    update: function (dt) {
-        if(!this._jogador.vivo){
-            cc.director.pause();
-            this._gameOver.active = true;
-        }
+    jogarNovamente : function(){
+        if(this._possoReiniciar){
+            cc.director.loadScene("Jogo");
+        }  
     },
+
+    jogoAcabou : function(){
+        this._possoReiniciar = true;
+        cc.director.pause();
+        this._gameOver.active = true;
+    }
+
+
 });

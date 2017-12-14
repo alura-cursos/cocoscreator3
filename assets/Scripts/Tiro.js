@@ -11,6 +11,13 @@ cc.Class({
     update : function(){
         this._movimentacao.andarPraFrente();  
     },
+    
+    iniciliza : function(pai, posicao, direcao){
+        this.node.parent = pai;
+        this.node.position = posicao;
+        this._movimentacao.setDirecao(direcao);
+    },
+    
     onCollisionEnter:function(outro){
         outro.node.emit("SofrerDano");
         this.node.destroy();

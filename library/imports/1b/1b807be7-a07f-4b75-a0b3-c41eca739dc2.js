@@ -9,31 +9,31 @@ cc.Class({
 
     properties: {
         _gameOver: cc.Node,
-        _jogador: cc.Componet
+        _possoReiniciar: false
     },
 
     onLoad: function onLoad() {
         cc.director.resume();
-        var jogadora = cc.find("Personagens/Personagem");
-        this._jogador = jogadora.getComponent("Jogador");
-        this._gameOver = cc.find("Interface/GameOver");
 
+        this._gameOver = cc.find("Interface/GameOver");
+        this._possoReiniciar = false;
         var canvas = cc.find("Canvas");
         canvas.on("mousedown", this.jogarNovamente, this);
+        cc.director.getScene().on("JogoAcabou", this.jogoAcabou, this);
     },
 
     jogarNovamente: function jogarNovamente() {
-        if (!this._jogador.vivo) {
+        if (this._possoReiniciar) {
             cc.director.loadScene("Jogo");
         }
     },
 
-    update: function update(dt) {
-        if (!this._jogador.vivo) {
-            cc.director.pause();
-            this._gameOver.active = true;
-        }
+    jogoAcabou: function jogoAcabou() {
+        this._possoReiniciar = true;
+        cc.director.pause();
+        this._gameOver.active = true;
     }
+
 });
 
 cc._RF.pop();

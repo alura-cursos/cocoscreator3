@@ -33,6 +33,9 @@
       },
       {
         "__id__": 57
+      },
+      {
+        "__id__": 66
       }
     ],
     "_tag": -1,
@@ -783,8 +786,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 497,
-      "y": 301
+      "x": 407,
+      "y": 356
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -841,7 +844,6 @@
     "_controleAnimacao": null,
     "_canvas": null,
     "_camera": null,
-    "vivo": true,
     "_audioTiro": null
   },
   {
@@ -1255,7 +1257,8 @@
       "__id__": 35
     },
     "_enabled": true,
-    "_gameOver": null
+    "_gameOver": null,
+    "_possoReiniciar": false
   },
   {
     "__type__": "cc.Node",
@@ -2233,5 +2236,66 @@
     "_loop": false,
     "playOnLoad": false,
     "preload": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Teclado",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 67
+      }
+    ],
+    "_prefab": null,
+    "_id": "8a6/AQDcNGQ4Mtr7ZdMzCj",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "8e9a1PYIgpCxo8ZnUs4CSBv",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 66
+    },
+    "_enabled": true
   }
 ]

@@ -12,8 +12,6 @@ cc.Class({
         _audioCoracao : cc.AudioSource,
     },
 
-   
-
      onLoad () {
          this._audioCoracao = this.getComponent(cc.AudioSource);
          cc.director.getScene().on("JogadoraPerdeuVida", this.tocarAudio, this);
