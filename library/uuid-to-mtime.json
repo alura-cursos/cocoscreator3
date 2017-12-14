@@ -4825,8 +4825,8 @@
     "relativePath": "Imagens\\Zumbi\\ParadoFrente\\idle_front00028.png"
   },
   "b1b819d6-754e-4a9b-a9d2-8a24bff4c720": {
-    "asset": 1513170913722,
-    "meta": 1513170913746,
+    "asset": 1513186924305,
+    "meta": 1513186924326,
     "relativePath": "Jogo.fire"
   },
   "11b87520-494e-4168-9ee4-2a3e9c756375": {
@@ -4845,13 +4845,13 @@
     "relativePath": "Prefabs\\Tiro.prefab"
   },
   "66dfbd53-7703-4d8d-995e-f4137a9a904e": {
-    "asset": 1513086987224,
+    "asset": 1513168781459,
     "meta": 1512991333695,
     "relativePath": "Scripts"
   },
   "65bf74ea-f0ad-46af-84a6-e29f55a14ec1": {
-    "asset": 1513170624247,
-    "meta": 1513170624264,
+    "asset": 1513172035530,
+    "meta": 1513172035552,
     "relativePath": "Prefabs\\Zumbi.prefab"
   },
   "7fefff2d-b400-4ab6-bced-09c9b8bd7d30": {
@@ -4863,11 +4863,6 @@
     "asset": 1512991356992,
     "meta": 1512991392814,
     "relativePath": "Scripts\\ControleDeAnimacao.js"
-  },
-  "60d0f08b-9001-4846-bdbc-e2326328582d": {
-    "asset": 1512991357039,
-    "meta": 1512991392877,
-    "relativePath": "Scripts\\GeradorDeInimigos.js"
   },
   "9d4cbf04-9993-45f8-8874-3759b46a6207": {
     "asset": 1512991357133,
@@ -4949,14 +4944,19 @@
     "meta": 1513170398504,
     "relativePath": "Scripts\\Tiro.js"
   },
-  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
-    "asset": 1513170554516,
-    "meta": 1513170576465,
-    "relativePath": "Scripts\\Inimigo.js"
-  },
   "d3299227-3ff8-40a0-a464-eadc34169210": {
     "asset": 1513170651705,
     "meta": 1513170652900,
     "relativePath": "Scripts\\Jogador.js"
+  },
+  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
+    "asset": 1513171991047,
+    "meta": 1513172012961,
+    "relativePath": "Scripts\\Inimigo.js"
+  },
+  "60d0f08b-9001-4846-bdbc-e2326328582d": {
+    "asset": 1513173641744,
+    "meta": 1513173653273,
+    "relativePath": "Scripts\\GeradorDeInimigos.js"
   }
 }

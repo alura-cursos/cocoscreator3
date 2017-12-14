@@ -72,8 +72,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 258,
-      "y": 860
+      "x": 266,
+      "y": 295
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -117,7 +117,9 @@
     },
     "_enabled": true,
     "alvo": null,
-    "dano": "20",
+    "dano": "25",
+    "tempoAtaque": "2",
+    "_cronometroAtaque": "Float",
     "_movimentacao": null,
     "_controleAnimacao": null,
     "_gameOver": null,
