@@ -355,7 +355,7 @@
     "relativePath": "Animacoes\\Perosnagem\\ParadoEsquerdaBaixo.anim"
   },
   "139bb71b-a772-4f24-b06c-1a85bad78e13": {
-    "asset": 1512991350443,
+    "asset": 1513075768937,
     "meta": 1512991333633,
     "relativePath": "Imagens"
   },
@@ -4825,8 +4825,8 @@
     "relativePath": "Imagens\\Zumbi\\ParadoFrente\\idle_front00028.png"
   },
   "b1b819d6-754e-4a9b-a9d2-8a24bff4c720": {
-    "asset": 1513080638321,
-    "meta": 1513080638356,
+    "asset": 1513087648484,
+    "meta": 1513087648506,
     "relativePath": "Jogo.fire"
   },
   "11b87520-494e-4168-9ee4-2a3e9c756375": {
@@ -4845,13 +4845,13 @@
     "relativePath": "Prefabs\\Tiro.prefab"
   },
   "66dfbd53-7703-4d8d-995e-f4137a9a904e": {
-    "asset": 1513000610454,
+    "asset": 1513080132934,
     "meta": 1512991333695,
     "relativePath": "Scripts"
   },
   "65bf74ea-f0ad-46af-84a6-e29f55a14ec1": {
-    "asset": 1512991356930,
-    "meta": 1512991392736,
+    "asset": 1513085296761,
+    "meta": 1513085296772,
     "relativePath": "Prefabs\\Zumbi.prefab"
   },
   "7fefff2d-b400-4ab6-bced-09c9b8bd7d30": {
@@ -4877,7 +4877,7 @@
   "c4fa02e4-2939-48cd-b1b8-f3647423d784": {
     "asset": 1512991333789,
     "meta": 1512991333836,
-    "relativePath": "trilha.ogg"
+    "relativePath": "Audio\\trilha.ogg"
   },
   "7a912326-344b-4733-af99-dc948d74a513": {
     "asset": 1512995242309,
@@ -4909,19 +4909,49 @@
     "meta": 1513078321553,
     "relativePath": "Scripts\\Pontucao.js"
   },
-  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
-    "asset": 1513079860885,
-    "meta": 1513079863682,
-    "relativePath": "Scripts\\Inimigo.js"
-  },
-  "d3299227-3ff8-40a0-a464-eadc34169210": {
-    "asset": 1513080380454,
-    "meta": 1513080389531,
-    "relativePath": "Scripts\\Jogador.js"
-  },
   "004f67aa-34c7-40c3-98e9-1030098557fc": {
     "asset": 1513080485323,
     "meta": 1513080492978,
     "relativePath": "Scripts\\BarraDeVida.js"
+  },
+  "b1de0583-4d3d-4980-9a9f-2d2316525406": {
+    "asset": 1513084718771,
+    "meta": 1513084718789,
+    "relativePath": "Audio\\SomTiro.ogg"
+  },
+  "124b8a91-2d1c-4788-b241-2929b170f2b2": {
+    "asset": 1513084730533,
+    "meta": 1513084730537,
+    "relativePath": "Audio"
+  },
+  "fab364e3-62c8-4277-84a4-cce083d65e18": {
+    "asset": 1513085271161,
+    "meta": 1513085271170,
+    "relativePath": "Audio\\MorteZumbi.ogg"
+  },
+  "db00ef83-28a7-4f8e-9ee9-6a20ef1db437": {
+    "asset": 1513085428544,
+    "meta": 1513085434706,
+    "relativePath": "Scripts\\Inimigo.js"
+  },
+  "5a5f114a-eddd-4fdf-9afb-48566e8c2825": {
+    "asset": 1513085558142,
+    "meta": 1513085572631,
+    "relativePath": "Scripts\\TocarAudioComEvento.js"
+  },
+  "489662b4-4154-461e-bb60-e658ddc9c4b2": {
+    "asset": 1513086936573,
+    "meta": 1513086936584,
+    "relativePath": "Audio\\CoraçãoBatendo.wav"
+  },
+  "d3299227-3ff8-40a0-a464-eadc34169210": {
+    "asset": 1513087281817,
+    "meta": 1513087289882,
+    "relativePath": "Scripts\\Jogador.js"
+  },
+  "f2b06ea0-d4e0-45e7-861c-80d631bc9cb4": {
+    "asset": 1513087562389,
+    "meta": 1513087563390,
+    "relativePath": "Scripts\\AudioCoracao.js"
   }
 }

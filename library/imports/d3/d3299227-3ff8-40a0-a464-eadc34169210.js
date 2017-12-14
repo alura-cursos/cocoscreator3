@@ -16,7 +16,8 @@ cc.Class({
         _controleAnimacao: cc.Component,
         _canvas: cc.Canvas,
         _camera: cc.Node,
-        vivo: true
+        vivo: true,
+        _audioTiro: cc.AudioSource
 
     },
 
@@ -25,6 +26,7 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.teclaSolta, this);
         this._movimentacao = this.getComponent("Movimentacao");
         this._controleAnimacao = this.getComponent("ControleDeAnimacao");
+        this._audioTiro = this.getComponent(cc.AudioSource);
         this._canvas = cc.find("Canvas");
         this._canvas.on("mousedown", this.atirar, this);
         this._canvas.on("mousemove", this.mudarDirecaoDaAnimcao, this);
@@ -40,7 +42,7 @@ cc.Class({
     },
 
     sofrerDano: function sofrerDano() {
-        this._vidaAtual -= 1;
+        this._vidaAtual = 1;
         var eventoPerdeVida = new cc.Event.EventCustom("JogadoraPerdeuVida", true);
         eventoPerdeVida.setUserData({ vidaAtual: this._vidaAtual, vidaMaxima: this.vidaMaxima });
         this.node.dispatchEvent(eventoPerdeVida);
@@ -76,6 +78,8 @@ cc.Class({
         disparo.parent = this.node.parent;
         disparo.position = this.node.position;
         disparo.getComponent("Movimentacao").setDirecao(direcao);
+
+        this._audioTiro.play();
     },
 
     teclaPressionada: function teclaPressionada(event) {

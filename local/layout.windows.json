@@ -52,18 +52,18 @@
                 "children": [
                   "scene"
                 ],
-                "height": 387,
+                "height": 301,
                 "type": "panel",
                 "width": 844
               },
               {
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "node-library",
                   "timeline"
                 ],
-                "height": 226,
+                "height": 312,
                 "type": "panel",
                 "width": 844
               }

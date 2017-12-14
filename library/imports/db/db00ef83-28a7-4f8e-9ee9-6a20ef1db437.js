@@ -19,7 +19,8 @@ cc.Class({
     onLoad: function onLoad() {
         this._movimentacao = this.getComponent("Movimentacao");
         this._controleAnimacao = this.getComponent("ControleDeAnimacao");
-        this._gameOver = cc.find("GameOver");
+        this.audioMorte = this.getComponent(cc.AudioSource);
+
         this.alvo = cc.find("Personagens/Personagem");
         this.node.on("SofrerDano", this.morrer, this);
     },
