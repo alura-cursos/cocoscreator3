@@ -21,6 +21,7 @@ cc.Class({
         this._controleAnimacao = this.getComponent("ControleDeAnimacao");
         this._gameOver = cc.find("GameOver");
         this.alvo = cc.find("Personagens/Personagem");
+        this.node.on("SofrerDano", this.morrer, this);
     },
 
     update: function update(dt) {
@@ -31,8 +32,14 @@ cc.Class({
         this._movimentacao.andarPraFrente();
 
         if (distancia < this.distanciaAtaque) {
-            this.alvo.getComponent("Jogador").vivo = false;
+            this.alvo.emit("SofreDano");
         }
+    },
+
+    morrer: function morrer() {
+        var eventoMorte = new cc.Event.EventCustom("ZumbiMorreu", true);
+        this.node.dispatchEvent(eventoMorte);
+        this.node.destroy();
     }
 
 });

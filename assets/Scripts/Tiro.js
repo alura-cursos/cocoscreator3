@@ -12,10 +12,7 @@ cc.Class({
         this._movimentacao.andarPraFrente();  
     },
     onCollisionEnter:function(outro){
-        if(outro.node.group == "inimigo"){
-
-            outro.node.destroy();
-        }
+        outro.node.emit("SofrerDano");
         this.node.destroy();
     }
 

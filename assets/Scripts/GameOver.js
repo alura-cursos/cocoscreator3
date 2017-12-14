@@ -10,7 +10,7 @@ cc.Class({
         cc.director.resume();
         let jogadora = cc.find("Personagens/Personagem");
         this._jogador = jogadora.getComponent("Jogador");
-        this._gameOver = cc.find("GameOver");
+        this._gameOver = cc.find("Interface/GameOver");
         
         let canvas = cc.find("Canvas");
         canvas.on("mousedown", this.jogarNovamente, this);

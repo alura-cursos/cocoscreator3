@@ -2,6 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        _vidaAtual : cc.Float,
+        vidaMaxima : cc.Float,
         _direcao : cc.Vec2,
         tiro : cc.Prefab,
         _movimentacao : cc.Component,
@@ -23,13 +25,24 @@ cc.Class({
         this._canvas.on("mousemove", this.mudarDirecaoDaAnimcao, this);
         this._camera = cc.find("Camera");
         this.vivo = true;
-
+        this.node.on("SofreDano", this.sofrerDano, this);
+        this._vidaAtual = this.vidaMaxima;
     },
     
     update: function (deltaTime) {
         this._movimentacao.setDirecao(this._direcao);
         this._movimentacao.andarPraFrente();
 
+    },
+    
+    sofrerDano: function(){
+        this._vidaAtual -= 1;
+        let eventoPerdeVida = new cc.Event.EventCustom("JogadoraPerdeuVida", true);
+        eventoPerdeVida.setUserData({vidaAtual : this._vidaAtual ,  vidaMaxima : this.vidaMaxima});
+        this.node.dispatchEvent(eventoPerdeVida);
+        if(this._vidaAtual <0){
+            this.vivo = false;
+        }
     },
 
     mudarDirecaoDaAnimcao : function(event){

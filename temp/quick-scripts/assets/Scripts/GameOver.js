@@ -16,7 +16,7 @@ cc.Class({
         cc.director.resume();
         var jogadora = cc.find("Personagens/Personagem");
         this._jogador = jogadora.getComponent("Jogador");
-        this._gameOver = cc.find("GameOver");
+        this._gameOver = cc.find("Interface/GameOver");
 
         var canvas = cc.find("Canvas");
         canvas.on("mousedown", this.jogarNovamente, this);

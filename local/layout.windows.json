@@ -57,11 +57,11 @@
                 "width": 844
               },
               {
-                "active": 0,
+                "active": 1,
                 "children": [
                   "console",
-                  "timeline",
-                  "node-library"
+                  "node-library",
+                  "timeline"
                 ],
                 "height": 226,
                 "type": "panel",
@@ -76,9 +76,9 @@
         "type": "dock-h"
       },
       "panels": [
-        "node-library",
-        "console",
         "inspector",
+        "console",
+        "node-library",
         "hierarchy",
         "assets",
         "scene",
